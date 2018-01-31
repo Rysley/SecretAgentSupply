@@ -1,14 +1,14 @@
-html{
+html {
   font-size: 18px;
   font-family: Helvetica, sans-serif;
   color: white;
 }
 
-h1{
+h1 {
   font-size: 2rem;
 }
 
-header{
+header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@ header{
   z-index: 20;
 }
 
-header h3{
+header h3 {
   margin: 0.66rem 0rem;
 }
 
@@ -54,11 +54,11 @@ header img {
   height: 100%;
 }
 
-.navstripe .container{
+.navstripe .container {
   justify-content: space-between;
 }
 
-.grid .container{
+.grid .container {
   margin: 3rem 0rem;
   height: auto;
   justify-content: space-between;
@@ -74,28 +74,36 @@ header img {
   font-weight: bold;
 }
 
-.banner .container{
+.minHeadline{
+  display: none;
+}
+
+.banner .container {
   align-items: flex-start;
   margin-top: 11rem;
 }
 
-.headline h1{
-  margin-top: 0.25rem;
+.headline h1 {
+  margin-top: 1.5rem;
   margin-left: 3rem;
   margin-bottom: 3rem;
   margin-right: 2rem;
 }
 
-.headline h3{
+.headline h3 {
   margin-top: 2rem;
   margin-left: 3rem;
 }
 
-.navstripe{
+.navstripe {
   justify-content: center;
   background-color: firebrick;
   height: 50px;
   width: 100%
+}
+
+.minMenu {
+  display: none;
 }
 
 .navstripe a {
@@ -134,7 +142,7 @@ header img {
   justify-content: center;
 }
 
-.imageTitle h3{
+.imageTitle h3 {
   margin: 0.5rem 0rem;
 }
 
@@ -152,7 +160,7 @@ header img {
   justify-content: center;
 }
 
-.contact .container{
+.contact .container {
   justify-content: space-between;
   /*background-color: green;*/
   margin-bottom: 4rem;
@@ -169,7 +177,7 @@ header img {
   background-color: black;
 }
 
-.topInfo h3{
+.topInfo h3 {
   margin: 1rem 2rem;
 
 }
@@ -180,7 +188,7 @@ header img {
   background-color: white;
 }
 
-.bottomInfo h3{
+.bottomInfo h3 {
   color: black;
 }
 
@@ -191,31 +199,144 @@ footer {
   background-color: black;
 }
 
-footer .container{
+footer .container {
   justify-content: flex-start;
 }
 
 @media only screen and (max-width: 1024px){
 
-  .grid .container{
+  .grid .container {
     flex-wrap: wrap;
   }
+
   .item {
     width: 47%;
     margin-top: 1rem;
   }
-  header img{
+
+  header img {
     filter: blur(0.8px);
   }
-.banner {
-  background-attachment: fixed;
-  background-position-x: 30%;
-  background-position-y: 50%;
+
+  .banner {
+    background-attachment: fixed;
+    background-position-x: 30%;
+    background-position-y: 50%;
+  }
+
+  .headline {
+    opacity: 0.93;
+  }
+
+  .minHeadline{
+    display: block;
+    background-color: black;
+    width: 100%
+    height: auto;
+  }
+
+  .maxMenu {
+    display: none;
+  }
+
+  .minMenu {
+    display: block;
+    text-align: center;
+  }
+
+  .navstripe .container {
+    justify-content: center;
+  }
+
+  .medGrid{
+    display: none;
+  }
+
+  h1{
+    font-size: 1.5rem;
+  }
+
+  .headline{
+    width: 20rem;
+  }
+
+  .minHeadline{
+    display: none;
+  }
+
+}
+
+
+@media only screen and (max-width: 470px){
+
+.container{
+  width: 100%;
 }
 
 .headline{
-  opacity: 0.93;
+  display: none;
 }
+
+.banner .container{
+  display: none;
+}
+
+.minHeadline {
+  display: block;
+  width: 100%
+  background-color: black;
+  height: 100%;
+  font-weight: bold;
+
+}
+
+.minHeadline h2{
+  padding: 1rem 0rem 0.5rem 2rem;
+  font-size: 0.77rem;
+  background-color: black;
+}
+
+.minHeadline h1{
+  font-size: 1rem;
+  padding: 0.5rem 0rem 1rem 2rem;
+
+}
+
+.banner{
+  background-position: center;
+  background-attachment: local;
+  height: 15rem;
+}
+
+
+  .item {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  .grid .container {
+    justify-content: center;
+  }
+
+.minGrid{
+  display: none;
+}
+
+.contact .container {
+  flex-direction: column;
+}
+
+.info {
+  margin-bottom: 0.5rem;
+  width: 90%
+}
+
+footer .container {
+  justify-content: center;
+}
+
+
+
 
 
 }
